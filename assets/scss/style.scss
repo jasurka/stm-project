@@ -12,30 +12,39 @@ body{
   margin:0 auto;
   .col-1{
     max-width: 8%;
+    width:100%;
   }
   .col-2{
     max-width: 16%;
+    width:100%;
   }
   .col-3{
     max-width: 25%;
+    width:100%;
   }
   .col-4{
     max-width: 34%;
+    width:100%;
   }
   .col-5{
     max-width: 42%;
+    width:100%;
   }
   .col-6{
     max-width: 50%;
+    width:100%;
   }
   .col-7{
     max-width: 58%;
+    width:100%;
   }
   .col-8{
     max-width: 66%;
+    width:100%;
   }
   .col-9{
     max-width: 75%;
+    width:100%;
   }
 
 }
@@ -126,6 +135,7 @@ body{
           font-size: 57px;
         }
       }
+
       .descr{
         font-size: 28px;
         color:#515254;
@@ -151,5 +161,71 @@ body{
         }
       }
     }
+  }
+  .second-row{
+    min-height: 542px;
+    background: linear-gradient(90deg, #ffc03f 40%, #fff 0%);
+    display: flex;
+    align-items: center;
+    .second-heading{
+      font-size: 38px;
+      font-family: $poppins;
+      max-width: 60%;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    .second-descr{
+      font-size: 22px;
+      line-height: 33px;
+    }
+    .classes-row{
+      justify-content: space-around;
+      .class-item{
+        width: 270px;
+        height: 300px;
+        background-color: #e5e5e5;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+        box-shadow: 1px 0px 28px 0px rgb(0 0 0 / 50%);
+        &:before{
+          content: "$99";
+          width: 64px;
+          height: 58px;
+          background-color: #fff;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          left: -20px;
+          z-index: 4;
+          font-size: 18px;
+          font-weight: 700;
+          bottom: 25px;
+          border-radius: 4px;
+          box-shadow: 1px 0px 28px 0px rgb(0 0 0 / 50%);
+        }
+        &:after{
+          content: '';
+          width: 100%;
+          position: absolute;
+          bottom:0;
+          left: 0;
+          height: 50%;
+          background: linear-gradient(0deg, black, transparent);
+        }
+        .class-name{
+          font-size: 18px;
+          text-transform: uppercase;
+          font-family: $poppins;
+          max-width: 60%;
+          color:#fff;
+          z-index: 5;
+        }
+      }
+    }
+
   }
 }
