@@ -161,6 +161,9 @@ body .row {
   display: flex;
   align-items: center;
 }
+#main .second-row > div {
+  position: relative;
+}
 #main .second-row .second-heading {
   font-size: 38px;
   font-family: Poppins;
@@ -219,4 +222,98 @@ body .row {
   max-width: 60%;
   color: #fff;
   z-index: 5;
+}
+#main .second-row .classes-row .nav-buttons {
+  position: absolute;
+  left: 0;
+  top: 90%;
+}
+#main .second-row .classes-row .nav-buttons button {
+  padding: 0;
+  background: none;
+  border: none;
+}
+#main .third-row {
+  padding: 40px 0;
+}
+#main .third-row .triggers-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+#main .third-row .triggers-wrap .third-heading-block .third-heading {
+  font-size: 17px;
+  line-height: 28px;
+  color: #828282;
+  font-family: Poppins;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+#main .third-row .triggers-wrap .third-heading-block .third-subheading {
+  font-size: 18px;
+  font-family: Poppins;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin: 0;
+}
+#main .third-row .triggers-wrap .third-heading-block a {
+  text-decoration: none;
+  color: #000;
+}
+#main .fourth-row {
+  padding: 40px 0;
+  background-image: url("images/blueshape.png");
+  background-size: cover;
+  background-position: center bottom;
+}
+#main .fourth-row > div {
+  align-items: center;
+  gap: 50px;
+}
+#main .fourth-row .fourth-heading {
+  font-size: 38px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+}
+#main .fourth-row .fourth-subheading {
+  font-size: 28px;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 40px;
+  font-weight: 500;
+  margin-top: 0;
+}
+#main .fourth-row .fourth-descr {
+  font-size: 22px;
+  line-height: 33px;
+  color: #828282;
+  margin-bottom: 20px;
+}
+#main .fourth-row .social-block {
+  align-items: center;
+  justify-content: space-between;
+}
+#main .fourth-row .socials {
+  align-items: center;
+  gap: 20px;
+}
+#main .fourth-row .video-block {
+  width: 690px;
+  height: 670px;
+  background-color: #e5e5e5;
+  position: relative;
+}
+#main .fourth-row .video-block:before {
+  content: "";
+  background-image: url(images/playbutton.png);
+  position: absolute;
+  left: -20px;
+  top: 50px;
+  width: 91px;
+  height: 91px;
 }
