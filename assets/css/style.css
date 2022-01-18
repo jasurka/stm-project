@@ -47,6 +47,10 @@ body .row {
   max-width: 75%;
   width: 100%;
 }
+.container .col-12 {
+  max-width: 100%;
+  width: 100%;
+}
 
 #header {
   background-color: #fff;
@@ -308,12 +312,96 @@ body .row {
   background-color: #e5e5e5;
   position: relative;
 }
-#main .fourth-row .video-block:before {
-  content: "";
-  background-image: url(images/playbutton.png);
+#main .fourth-row .video-block .video-button {
   position: absolute;
-  left: -20px;
+  left: -45px;
   top: 50px;
+  background-color: #ffc03f;
+  border: none;
   width: 91px;
   height: 91px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main .fifth-row > div {
+  align-items: center;
+  justify-content: space-between;
+}
+#main .fifth-row .form .row {
+  flex-wrap: wrap;
+}
+#main .fifth-row .form #name {
+  width: 100%;
+  max-width: 608px;
+}
+#main .fifth-row .form input {
+  width: 90%;
+  height: 57px;
+  margin-bottom: 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 0;
+  padding: 0 5px;
+  color: #e5e5e5;
+}
+#main .fifth-row .form input::placeholder {
+  color: #515254;
+  font-family: Poppins;
+}
+#main .fifth-row .form .checkboxes {
+  justify-content: space-between;
+}
+#main .fifth-row .form .checkboxes .sport-courses {
+  width: 120px;
+  height: 105px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#main .fifth-row .form .checkboxes .sport-courses .sport-descr {
+  margin: 0;
+}
+#main .fifth-row .form-heading {
+  font-size: 38px;
+  font-family: Poppins;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+}
+#main .fifth-row .form-descr {
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 45px;
+  margin-top: 0;
+}
+#main .fifth-row .prefer-course {
+  font-size: 20px;
+  line-height: 25px;
+  font-family: Poppins;
+  color: #000;
+  font-weight: 500;
+  margin: 20px 0px;
+}
+#main .fifth-row .form-img {
+  max-width: 100%;
+}
+#main .fifth-row .submit {
+  font-family: Poppins;
+  font-size: 19px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50px;
+  width: 330px;
+  height: 78px;
+  margin-top: 30px;
+}
+#main .fifth-row .submit:before {
+  content: ">";
+  padding-left: 5px;
 }
