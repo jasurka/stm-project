@@ -164,8 +164,10 @@
                     <p class="form-descr">Sign up for your free 3-day trial today! All of you are welcome</p>
                     <div class="row">
                         <div class="col-12"><input type="text" name="yourname" id="name" placeholder="Your name"></div>
-                        <div class="col-6"><input type="email" name="youremail" id="email" placeholder="Your email"></div>
-                        <div class="col-6"><input type="tel" name="yourtel" id="phone" placeholder="Your phone number"></div>
+                        <div class="col-6"><input type="email" name="youremail" id="email" placeholder="Your email">
+                        </div>
+                        <div class="col-6"><input type="tel" name="yourtel" id="phone" placeholder="Your phone number">
+                        </div>
                     </div>
                     <h6 class="prefer-course">The courses you prefer</h6>
                     <div class="checkboxes row">
@@ -196,5 +198,28 @@
         </div>
     </div>
 </div>
+<div class="overlay">
+    <div class="modal-login">
+        <div class="modal-inner row">
+            <div class="col-6">
+                    <div class="form-heading">Login</div>
+                    <form class="login-form">
+                        <input type="text" class="login modal-input" name="login-name">
+                        <input type="password" class="password modal-input" name="login-password">
+                    </form>
+            </div>
+            <div class="col-6">
+                    <div class="form-heading">Sign up</div>
+                    <form class="register-form">
+                        <input type="text" class="login modal-input" name="register-name">
+                        <input type="password" class="password modal-input" name="register-password">
+                    </form>
+            </div>
+            <img src="images/close-button.png" class="close-button" width="32" height="32">
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>

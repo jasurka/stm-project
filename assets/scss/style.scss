@@ -6,6 +6,63 @@ body {
   .row {
     display: flex;
   }
+
+  .overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.5);
+    transition: .4s;
+    left: 0;
+    top: 0;
+  }
+
+  .modal-login {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    height: fit-content;
+    padding: 40px 40px;
+    border-radius: 4px;
+
+    .modal-inner {
+      position: relative;
+      gap: 30px;
+      .form-heading{
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      .login-form, .register-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .modal-input{
+          height: 30px;
+          font-size: 16px;
+          color: #333;
+          border: 1px solid #333;
+          box-shadow: none;
+          margin-bottom: 10px;
+          border-radius: 4px;
+        }
+      }
+      .close-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+  }
+
+  .show {
+    display: block;
+  }
 }
 
 .container {
@@ -469,16 +526,18 @@ body {
     .form-img {
       max-width: 100%;
     }
-    .submit{
+
+    .submit {
       font-family: $poppins;
       font-size: 19px;
-      color:#fff;
+      color: #fff;
       background-color: #000;
       border-radius: 50px;
       width: 330px;
       height: 78px;
       margin-top: 30px;
-      &:before{
+
+      &:before {
         content: '>';
         padding-left: 5px;
       }
