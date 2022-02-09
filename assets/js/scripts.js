@@ -1,31 +1,50 @@
-let modalForm = document.querySelector('.modal-login')
-let overlay = document.querySelector('.overlay')
-let videoUrl = document.querySelector('.video-inner iframe').getAttribute('src')
+$(document).ready(function(){
 
-document.querySelector('.login').addEventListener('click', function (){
-    //e.preventDefault()
-    modalForm.classList.add('show')
-    overlay.classList.add('show')
-})
-overlay.addEventListener('click', function (){
-    modalForm.classList.remove('show')
-    overlay.classList.remove('show')
-    document.querySelector('.video-inner iframe').setAttribute('src', videoUrl)
-})
-document.querySelector('.close-button').addEventListener('click',function (){
-    modalForm.classList.remove('show')
-    overlay.classList.remove('show')
-})
+    let modalForm = $('.modal-login');
+    let overlay = $('.overlay');
+    let videoUrl = $('.video-inner iframe').attr('src');
+    
+    $('.login').on('click', function (){
+        //e.preventDefault()
+        modalForm.fadeIn(400);
+        overlay.fadeIn(400);
+    })
+    overlay.on('click', function (){
+        modalForm.fadeOut(400);
+        overlay.fadeOut(400);
+        formPopup.fadeOut(400);
+        $('.video-inner iframe').attr('src', videoUrl);
+    })
+    $('.close-button').on('click',function (){
+        modalForm.fadeOut(400);
+        overlay.fadeOut(400);
+    })
+    
+    $('.video-button').on('click', function(){
+        overlay.fadeIn(400);
+        $('.video-modal').fadeIn(400);
+    })
+    
+    jQuery('.classes-row').slick({
+        infinite:true,
+        slidesToShow:3,
+        dots:true,
+        arrows:false,
+        margin:20,
+    });
 
-document.querySelector('.video-button').addEventListener('click', function(){
-    overlay.classList.add('show')
-    document.querySelector('.video-modal').classList.add('show')
-})
+    let form = $('.form');
+    let formPopup = $('.form-popup');
+    form.on('submit', function(e){
+        e.preventDefault();
+        formPopup.find('.name-value').html($('#name').val());
+        formPopup.find('.email-value').html($('#email').val());
+        formPopup.find('.phone-value').html($('#phone').val());
+        //formPopup.find('.course-value').html($('#name').val());
+        overlay.fadeIn(400);
+        formPopup.fadeIn(400);
 
-jQuery('.classes-row').slick({
-    infinite:true,
-    slidesToShow:3,
-    dots:true,
-    arrows:false,
-    margin:20,
-})
+    });
+
+});
+
